@@ -2,6 +2,7 @@ package com.android.neuandroid;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +21,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private static final String API_QUERY = "http://api.icndb.com/jokes/random?escape=javascript";
 
@@ -55,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        chuckText.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivityForResult(intent, 1);
+                return false;
+            }
+        });
+
         progressBar = (ProgressBar) findViewById(R.id.loading_indicator);
         editFirst = (EditText) findViewById(R.id.edit_first);
         editLast = (EditText) findViewById(R.id.edit_last);
@@ -66,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
         loadingText = (TextView) findViewById(R.id.loading_text);
         mShortAnimationDuration = getResources().getInteger(
                 android.R.integer.config_shortAnimTime);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if requestCode==1 && resultCode == RESULT_OK
+                data.getIntExtra("temp", 0);
     }
 
     /**
