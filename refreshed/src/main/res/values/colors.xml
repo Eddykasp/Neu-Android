@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#689f38</color>
     <color name="colorAccent">#fdd835</color>
     <color name="colorIcons">#ffffff</color>
+
+    <!-- weather colours-->
+    <color name="textcolor">#FFF</color>
+    <color name="timeTextColor">#80ffffff</color>
+    <color name="cc">#FF00FF</color>
+    <color name="buttons">#40ffffff</color>
 </resources>

@@ -3,6 +3,8 @@
     package="com.neuandroid.refreshed" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,6 +31,21 @@
             </intent-filter>
         </activity>
         <activity android:name="com.neuandroid.xkcd.activity.ImageDetailActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name="com.neuandroid.weather.ui.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.neuandroid.weather.ui.DailyForecastActivity">
+        </activity>
+        <activity android:name="com.neuandroid.weather.ui.HourlyForecastActivity">
+        </activity>
+        <activity android:name="com.neuandroid.weather.ui.show_specific_temp">
+        </activity>
     </application>
 
 </manifest>

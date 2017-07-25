@@ -16,6 +16,7 @@
 
 package com.neuandroid.refreshed;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -171,6 +172,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_xkcd:
                 fragmentClass = XKCDFragment.class;
+                break;
+            case R.id.nav_weather:
+                Intent weatherIntent = new Intent(this, com.neuandroid.weather.ui.MainActivity.class);
+                startActivity(weatherIntent);
+                break;
         }
 
         if(newsIndex >= 0){
