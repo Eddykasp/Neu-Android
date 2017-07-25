@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/gradient"
+    tools:context="com.neuandroid.weatherapp.ui.show_specific_temp">
+
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="100sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/textcolor"
+        android:text="@string/temperature_text"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="108dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="108dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="381dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/humidityLabel"
+                android:text="@string/humide"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/timeTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/humidityPrct"
+                android:text="--"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/textcolor"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/rainLabel"
+                android:layout_gravity="center"
+                android:text="@string/rain"
+                android:textColor="@color/timeTextColor"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/rainProb"
+                android:text="--"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textColor="@color/textcolor"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/degree"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="237dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/degree"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="276dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="276dp"/>
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timeText"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/timeTextColor"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="192dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almanac je suis la"
+        android:textSize="24sp"
+        android:textColor="@color/textcolor"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="131dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <ImageView
+        android:id="@+id/skyState"
+        android:layout_width="85dp"
+        android:layout_height="72dp"
+        app:srcCompat="@drawable/cloudy_night"
+        android:layout_marginStart="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="208dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/remindComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="485dp"
+        android:text="@string/introWeather"
+        android:textAlignment="center"
+        android:textColor="@color/textcolor"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <ImageView
+        android:id="@+id/refreshView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/refresh"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="38dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <ProgressBar
+        android:id="@+id/refresshprogressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="38dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"/>
+
+    <TextView
+        android:id="@+id/lastRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="86dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="595dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <Button
+            android:id="@+id/hourly"
+            android:text="@string/button1"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            android:layout_width="match_parent"
+            android:background="@color/buttons"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/daily"
+            android:textAlignment="center"
+            android:text="@string/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/buttons"
+            android:textColor="@color/textcolor"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

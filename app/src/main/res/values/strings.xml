@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="error_title">Oops!</string>
+    <string name="error_msg">Connection issue, please try again!</string>
+    <string name="error_ok">OK</string>
+    <string name="temperature_text">--</string>
+    <string name="timeText">...</string>
+    <string name="humide">HUMIDITY</string>
+    <string name="rain">RAIN/SNOW?</string>
+    <string name="introWeather">Getting current Weather</string>
+    <string name="button1">Hourly</string>
+    <string name="button2">Daily</string>
+    <string name="no_daily_forecast_data">There is no data to display</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="title_activity_maps">Map</string>
+    <!--<string name="degree">\u000</string>-->
+</resources>
